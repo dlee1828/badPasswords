@@ -144,7 +144,7 @@ function show(){
 
 //Finding weakness and sample passwords:
 var weaknessDescriptions = [
-  "Very cvommon password",
+  "Very common password",
   "Common password",
   "Variation of a very common password: ",
   "An English word",
