@@ -96,7 +96,7 @@ function resetValues(){
 }
 var enteredWord;
 function run(){
-  if(ran || showed) return;
+  if(ran) return;
   enteredWord = space1.value + a + space2.value + b + space3.value;
   if(enteredWord.length < n){
     response.innerHTML = "Please enter all characters";
@@ -138,7 +138,7 @@ function show(){
 
 //Finding weakness and sample passwords:
 var weaknessDescriptions = [
-  "Very cvommon password",
+  "Very common password",
   "Common password",
   "Variation of a very common password: ",
   "An English word",
