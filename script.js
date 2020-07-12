@@ -126,10 +126,10 @@ function show(){
     list.innerHTML = "No bad passwords found";
   }
   var tempSamples = samples.slice();
-  resetValues();
   var weaknessMessage;
   for(var i = 0; i < 10; i++){
     if(i == tempSamples.length) break;
+    resetValues();
     sample = tempSamples[i];
     w = findWeakness(sample)
     weaknessMessage = "<b>" + sample + "</b>" + " (" + (8-w).toString() + ") <br>" + weaknessDescriptions[w];
