@@ -13,21 +13,23 @@ body{
   width: 100vw;
   height: 15vh;
   line-height: 15vh;
-  font-size: 30px;
+  font-size: 5vh;
   text-align: center;
+  flex-grow: 1;
 }
 .middle{
   width: 100vw;
   height: 15vh;
   line-height: 15vh;
   text-align: center;
+  flex-grow: 1;
 }
 .middle2{
   width: 100vw;
   height: 15vh;
   line-height: 2vh;
   text-align: center;
-
+  flex-grow: 1;
 }
 .givenChar{
   font-family: monospace;
@@ -35,13 +37,16 @@ body{
 }
 .response{
   height: 7vh;
+  flex-grow: 1;
 }
 .listTitle{
   font-size: 30px;
   height: 5vh;
+  flex-grow: 1;
 }
 .list{
   font-size: 20px;
+  flex-grow: 1;
 }
 
 input[type = "text"]{
