@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Bad Passwords</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <br>
+        Come up with the worst possible password:
+      </div>
+      <div class="middle" id = "inputSection">
+        <span id="area1"><input type="text" id="startInput"></span>
+        <span class="givenChar" id="firstGiven"></span>
+        <span id="area2"><input type="text" id="middleInput"></span>
+        <span class="givenChar" id="secondGiven"></span>
+        <span id="area3"><input type="text" id="endInput"></span>
+      </div>
+
+      <div class="middle">
+        <button type="button" name="button" id="submit" onclick="run()">test!</button>
+        <br><br>
+        <button type="button" name="button" onclick="reset()" style="font-size:20px">try another</button>
+        <button type="button" name="button" onclick="show()" style="font-size:20px">show passwords</button>
+      </div>
+      <p id="response" style="font-size:30px;"></p>
+      <div class="list" id="list">
+
+      </div>
+    </div>
+
+  </body>
+</html>
+
+<script src="script.js"> </script>

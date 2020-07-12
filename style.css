@@ -1,0 +1,42 @@
+body{
+  text-align: center;
+  /* background: black;
+  color: white; */
+}
+.container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+}
+.top{
+  width: 100vw;
+  height: 20vh;
+  line-height: 10vh;
+  font-size: 30px;
+  text-align: center;
+}
+.middle{
+  width: 100vw;
+  height: 15vh;
+  line-height: 2vh;
+  text-align: center;
+}
+.givenChar{
+  font-family: monospace;
+  font-size: 45px;
+}
+.list{
+  font-size: 20px;
+}
+input[type = "text"]{
+  font-size: 45px;
+  text-align: center;
+  font-family: monospace;
+  /* color: white;
+  background: black; */
+}
+button{
+  font-size: 45px;
+  font-family:sans-serif;
+}
