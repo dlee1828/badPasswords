@@ -35,6 +35,7 @@ var space2 = document.getElementById("middleInput");
 var space3 = document.getElementById("endInput");
 var response = document.getElementById("response");
 var list = document.getElementById("list");
+var listTitle = document.getElementById("listTitle");
 
 reset();
 var ran;
@@ -78,6 +79,7 @@ function reset(){
     currSpace.maxLength = currLength;
   }
   response.innerHTML = "";
+  listTitle.innerHTML = "";
   list.innerHTML = "";
   resetValues();
 }
@@ -103,12 +105,11 @@ function run(){
     return;
   }
   ran = true;
-  specialData = "jello";
   resetValues();
   var w = findWeakness(enteredWord);
   var weaknessMessage = "Weakness " + (8 - w).toString() + ": " + weaknessDescriptions[w];
   if(w == 2 || w == 4 || w == 5 || w == 6 || w == 7){
-    weaknessMessage = weaknessMessage + specialData;
+    weaknessMessage += specialData;
   }
   response.innerHTML = weaknessMessage;
   show();
@@ -120,25 +121,30 @@ function show(){
   var template = [n, x, a, y, b];
   generatePasswords(template);
   var sample;
-  list.innerHTML = "<b> Some possible bad passwords: <b> <br>"
-
+  listTitle.innerHTML = "Some possible bad passwords: <br>"
   if(samples.length == 0){
     list.innerHTML = "No bad passwords found";
   }
   var tempSamples = samples.slice();
   resetValues();
+  var weaknessMessage;
   for(var i = 0; i < 10; i++){
     if(i == tempSamples.length) break;
     sample = tempSamples[i];
     w = findWeakness(sample)
-    list.innerHTML += sample + " (weakness: " + (8-w).toString() + ") <br>";
+    weaknessMessage = "<b>" + sample + "</b>" + " (" + (8-w).toString() + ") <br>" + weaknessDescriptions[w];
+    if(w == 2 || w == 4 || w == 5 || w == 6 || w == 7){
+      weaknessMessage += specialData;
+    }
+    weaknessMessage += "<br>";
+    list.innerHTML += weaknessMessage;
   }
 }
 
 
 //Finding weakness and sample passwords:
 var weaknessDescriptions = [
-  "Very common password",
+  "Very cvommon password",
   "Common password",
   "Variation of a very common password: ",
   "An English word",

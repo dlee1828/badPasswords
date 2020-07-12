@@ -11,24 +11,39 @@ body{
 }
 .top{
   width: 100vw;
-  height: 20vh;
-  line-height: 20vh;
+  height: 15vh;
+  line-height: 15vh;
   font-size: 30px;
   text-align: center;
 }
 .middle{
   width: 100vw;
   height: 15vh;
+  line-height: 15vh;
+  text-align: center;
+}
+.middle2{
+  width: 100vw;
+  height: 15vh;
   line-height: 2vh;
   text-align: center;
+
 }
 .givenChar{
   font-family: monospace;
   font-size: 45px;
 }
+.response{
+  height: 7vh;
+}
+.listTitle{
+  font-size: 30px;
+  height: 5vh;
+}
 .list{
   font-size: 20px;
 }
+
 input[type = "text"]{
   font-size: 45px;
   text-align: center;
