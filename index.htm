@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
@@ -8,22 +9,42 @@
   </head>
   <body>
     <div class="container">
+      <div class="titleClass">Bad 
+        <span class="pwText">Passwords</span>
+      </div>
+      <div class="instructionContainer">
+        <div class="instructionTitle">
+          Instructions
+        </div>
+        <div class="titleLine">
+        </div>
+        <div class="instructionText">
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+      </div>
       <div class="top">
         Come up with the worst possible password:
       </div>
-      <div class="middle" id = "inputSection">
-        <span id="area1"><input type="text" id="startInput"></span>
-        <span class="givenChar" id="firstGiven"></span>
-        <span id="area2"><input type="text" id="middleInput"></span>
-        <span class="givenChar" id="secondGiven"></span>
-        <span id="area3"><input type="text" id="endInput"></span>
+      <div class="fakeInputArea">
+        <div class="middle" id = "inputSection">
+          <span id="area1"><input type="text" id="startInput"></span>
+          <span class="givenChar" id="firstGiven"></span>
+          <span id="area2"><input type="text" id="middleInput"></span>
+          <span class="givenChar" id="secondGiven"></span>
+          <span id="area3"><input type="text" id="endInput"></span>
+        </div>
       </div>
       <div class="middle2">
-        <button type="button" name="button" id="submit" onclick="run()">test!</button>
+        <button type="button" name="button" id="submit" onclick="run()">TEST THIS PASSWORD</button>
         <br><br>
-        <button type="button" name="button" onclick="reset()" style="font-size:20px">try another</button>
-        <button type="button" name="button" onclick="show()" style="font-size:20px">show passwords</button>
+        <button type="button" name="button" onclick="reset()" style="font-size:15px">TRY ANOTHER</button>
+        <button type="button" name="button" onclick="show()" style="font-size:15px">SHOW PASSWORDS</button>
       </div>
+      <br><br>
       <div class = "response" id="response" style="font-size:30px;"></div>
       <div class="listTitle" id="listTitle"></div>
       <div class="list" id="list" style=""></div>
