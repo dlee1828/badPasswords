@@ -42,22 +42,22 @@ space1.onkeyup = (e)=>{
     space2.focus();
   }
   if(e.keyCode === 13){
-    run();  
-  }  
+    run();
+  }
 }
 space2.onkeyup = (e)=>{
   if (space2.maxLength == space2.value.length) {
     space3.focus();
   }
   if(e.keyCode === 13){
-    run();  
-  }  
+    run();
+  }
 }
 for (let s of [space3]) {
   s.onkeyup = (e) => {
     if(e.keyCode === 13){
-      run();  
-    }  
+      run();
+    }
   };
 }
 
