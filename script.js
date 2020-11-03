@@ -37,6 +37,31 @@ var response = document.getElementById("response");
 var list = document.getElementById("list");
 var listTitle = document.getElementById("listTitle");
 
+space1.onkeyup = (e)=>{
+  if (space1.maxLength == space1.value.length) {
+    space2.focus();
+  }
+  if(e.keyCode === 13){
+    run();  
+  }  
+}
+space2.onkeyup = (e)=>{
+  if (space2.maxLength == space2.value.length) {
+    space3.focus();
+  }
+  if(e.keyCode === 13){
+    run();  
+  }  
+}
+for (let s of [space3]) {
+  s.onkeyup = (e) => {
+    if(e.keyCode === 13){
+      run();  
+    }  
+  };
+}
+
+
 reset();
 var ran;
 function reset(){
@@ -75,7 +100,9 @@ function reset(){
       inputAreas[i].append(currSpace);
     }
     currSpace.style.width = (currLength * charWidth).toString() + "px";
-    currSpace.placeholder = currLength.toString();
+    let pl = ""
+    for (let x = 0; x<currLength; x++) { pl+="*" }
+    currSpace.placeholder = pl;
     currSpace.maxLength = currLength;
   }
   response.innerHTML = "";
